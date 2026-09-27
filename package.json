@@ -1,0 +1,25 @@
+{
+  "name": "sportmicro-fantasy-football-data-mcp",
+  "version": "1.0.0",
+  "description": "An MCP server that gives fantasy-football builders grounded access to documented Sportmicro football data.",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "sportmicro-fantasy-football-data-mcp": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "node --test dist/test/**/*.test.js",
+    "pretest": "npm run build",
+    "prepare": "npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.2",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.7",
+    "typescript": "^5.6.3"
+  }
+}
